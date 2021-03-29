@@ -1,6 +1,7 @@
 package webservices.hello;
 
 import javax.jws.WebMethod;
+import javax.jws.WebParam;
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
 
@@ -9,5 +10,5 @@ import javax.jws.soap.SOAPBinding;
 public interface HelloWS {
 
     @WebMethod
-    public String getHello(String name);
+    public String getHello(@WebParam(name = "name", partName = "name") String name);
 }
